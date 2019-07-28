@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Hello World!</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css" >
+    <script src="https://kit.fontawesome.com/8d7b96bd5d.js"></script>
+  </head>
+  <body>
+    <div class="container mt-4">
+      <h1>音乐播放器</h1>
+      <div id="addedMusicList">
+      </div>
+      <button id="addMusic" type="button" class="btn btn-primary btn-lg btn-block mt-4">选择音乐</button>
+    </div>
+    <div class="container fixed-bottom bg-white pt-2">
+        <hr/>
+        <div id="current-music" class="row my-2">
+        </div>
+        <div class="progress mb-2">
+          <div id="process-bar" class="progress-bar bg-success" role="progressbar" style="width: 0%" >0%</div>
+        </div>
+      </div>
+      <!-- You can also require other files to run in this process -->
+    <script src="./index.js"></script>
+  </body>
+</html>
