@@ -39,6 +39,17 @@ $("addedMusicList").addEventListener("click", (event) => {
 
 })
 
+$('process').addEventListener("mousedown", (event) => {
+    console.log("parent mouse up event", event);
+    const bar = document.querySelector('#process').getBoundingClientRect();
+    const mouseX = event.clientX - bar.left;
+    console.log("mouse to border is ", mouseX);
+    const barWidth = bar.width;
+    let currentTime = Math.floor(player.duration * (mouseX / barWidth));
+    player.currentTime = currentTime;
+    player.play();
+});
+
 player.addEventListener('loadedmetadata', () => {
     renderPlayerHTML(currentTrack.name, convertTime(player.duration));
  });
